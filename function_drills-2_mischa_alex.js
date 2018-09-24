@@ -19,3 +19,31 @@ function beyond (num) {
 
 let buzzLightyear = beyond(0);
 console.log(buzzLightyear);
+
+function decode(str){
+  let words = str.split(" ");
+  let returnString = "";
+  for(let i = 0; i < words.length; i++){
+    switch (words[i][0]){
+      case 'a':
+        returnString += words[i][1];
+        break;
+      case 'b':
+        returnString += words[i][2];
+        break;
+      case 'c':
+        returnString += words[i][3];
+        break;
+      case 'd':
+        returnString += words[i][4];
+        break;
+      default:
+        returnString += " ";
+        break;
+    }
+  }
+  return returnString;
+}
+let decoded = decode('craft block argon meter bells brown croon droop');
+console.log(decoded);
+
